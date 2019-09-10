@@ -1,0 +1,131 @@
+{
+  "name": "rap2-dolores",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npm run start",
+    "build-css": "node-sass src/ -o src/",
+    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js --max-old-space-size=4096",
+    "build": "npm run lint && npm run build-css && react-scripts build",
+    "test-backup": "npm run lint && react-scripts test --env=jsdom",
+    "test": "npm run lint",
+    "eject": "react-scripts eject",
+    "lint": "tslint --project ./ -c tslint.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:thx/rap2-dolores.git"
+  },
+  "author": "mozhi.gyy@alibaba-inc.com",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.2.0",
+    "@material-ui/icons": "^4.2.1",
+    "@material-ui/pickers": "^3.1.2",
+    "@material-ui/styles": "^4.2.0",
+    "@types/json5": "^0.0.30",
+    "animate.css": "3.7.2",
+    "bootstrap": "^4.3.1",
+    "chart.js": "^2.8.0",
+    "classnames": "^2.2.6",
+    "clipboard-copy": "^3.1.0",
+    "codemirror": "5.48.0",
+    "connected-react-router": "^6.5.0",
+    "debounce-promise": "^3.1.2",
+    "formik": "^1.5.7",
+    "formik-material-ui": "^0.0.19",
+    "graceful": "1.0.2",
+    "history": "^4.9.0",
+    "jquery": "^3.4.1",
+    "json5": "^2.1.0",
+    "koa": "2.7.0",
+    "koa-router": "7.4.0",
+    "koa-session": "5.12.2",
+    "koa-static": "5.0.0",
+    "lodash": "4.17.13",
+    "mockjs": "1.0.1-beta3",
+    "moment": "2.24.0",
+    "node-fetch": "2.6.0",
+    "normalizr": "^3.4.0",
+    "notistack": "^0.8.9",
+    "nprogress": "0.2.0",
+    "parsleyjs": "^2.9.1",
+    "popper.js": "^1.15.0",
+    "prop-types": "15.7.2",
+    "rc-tooltip": "^3.7.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-icons": "3.7.0",
+    "react-modal": "3.8.2",
+    "react-redux": "^7.1.0",
+    "react-router": "5.0.1",
+    "react-router-config": "5.0.1",
+    "react-router-dom": "5.0.1",
+    "react-select": "^3.0.4",
+    "redux": "4.0.3",
+    "redux-saga": "1.0.5",
+    "reselect": "^4.0.0",
+    "sortablejs": "1.9.0",
+    "urijs": "1.19.1",
+    "yup": "^0.27.0"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "fetch"
+    ],
+    "ignore": [
+      "/build"
+    ]
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.7.55",
+    "@types/classnames": "^2.2.9",
+    "@types/codemirror": "^0.0.76",
+    "@types/history": "^4.7.2",
+    "@types/jest": "^24.0.15",
+    "@types/jquery": "^3.3.30",
+    "@types/lodash": "^4.14.136",
+    "@types/mockjs": "^1.0.2",
+    "@types/node": "^12.6.2",
+    "@types/nprogress": "^0.2.0",
+    "@types/rc-tooltip": "^3.7.1",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-modal": "^3.8.2",
+    "@types/react-redux": "^7.1.1",
+    "@types/react-router-config": "^5.0.0",
+    "@types/react-router-dom": "^4.3.4",
+    "@types/react-select": "^3.0.0",
+    "@types/sortablejs": "^1.7.2",
+    "@types/urijs": "^1.19.3",
+    "@types/yup": "^0.26.21",
+    "node-sass": "4.12.0",
+    "npm-run-all": "4.1.5",
+    "pre-commit": "^1.2.2",
+    "react-scripts": "^3.0.1",
+    "standard": "12.0.1",
+    "tslint": "^5.18.0",
+    "tslint-react": "^4.0.0",
+    "tslint-react-hooks": "^2.1.1",
+    "typescript": "^3.5.3"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
